@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index - siswa</title>
+</head>
+<body>
+<h1>INDEX SISWA</h1>
+<button><a th:href="@{~/siswa/add}">Add Siswa</a></button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name </th>
+        <th>NIS</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <body>
+    <tr th:each="siswa :${siswa}">
+        <td th:text="${siswa.id}"></td>
+        <td th:text="${siswa.name}"></td>
+        <td th:text="${siswa.nis}"></td>
+        <td>
+            <a th:href="@{/siswa/edit/{id}(id=${siswa.id})}">EDIT</a>
+            <a th:href="@{/siswa/delete/{id}(id=${siswa.id})}">DELETE</a>
+            <a th:href="@{/siswa/detail/{id}(id=${siswa.id})}">DETAIL</a>
+        </td>
+
+
+    </tr>
+    </body>
+</table>
+
+</body>
+</html>

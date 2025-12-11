@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>guru</title>
+</head>
+<body>
+<h1>INDEX GURU</h1>
+<button><a th:href="@{~/guru/add}">New Guru</a></button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nama Guru</th>
+        <th>NIP</th>
+        <th>Mata Pelajaran</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <body>
+    <tr th:each="guru : ${guru}">
+        <td th:text="${guru.id}"></td>
+        <td th:text="${guru.namaGuru}"></td>
+        <td th:text="${guru.nip}"></td>
+        <td th:text="${guru.mataPelajaran}"></td>
+        <td>
+            <a th:href="@{/guru/edit/{id}(id=${guru.id})}">EDIT</a>
+            <a th:href="@{/guru/delete/{id}(id=${guru.id})}">DELETE</a>
+            <a th:href="@{/guru/detail/{id}(id=${guru.id})}">DETAIL</a>
+        </td>
+    </tr>
+    </body>
+</table>
+</body>
+</html>

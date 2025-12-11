@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - guru</title>
+</head>
+<body>
+<h1>Delete Guru</h1>
+<form th:action="@{/guru/remove}" method="post">
+
+    <input type="hidden" name="id" th:value="${delete.id}">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${delete.id}"><br/>
+
+    <label for="nama">Nama Guru</label>
+    <input id="nama" type="text" th:value="${delete.namaGuru}"><br/>
+
+    <label for="nip">NIP</label>
+    <input id="nip" type="text" th:value="${delete.nip}"><br/>
+
+    <label for="mapel">Mata Pelajaran</label>
+    <input id="mapel" type="text" th:value="${delete.mataPelajaran}"><br/>
+
+    <button type="submit">Delete</button>
+    <a th:href="@{/guru}">
+        <button>Back</button>
+    </a>
+</form>
+
+</body>
+</html>

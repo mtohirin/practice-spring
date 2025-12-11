@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - kelas</title>
+</head>
+<body>
+<h1>Edit Data Kelas</h1>
+<form th:action="@{~/kelas/update}" method="post">
+    <input type="hidden" name="id" th:value="${kelas.id}">
+
+    <label for="nama">Nama Kelas</label>
+    <input id="nama" type="text" name="namaKelas" th:value="${kelas.namaKelas}"><br/>
+
+    <label for="walikelas">Wali Kelas</label>
+    <input id="walikelas" type="text" name="waliKelas" th:value="${kelas.waliKelas}"><br/>
+
+    <label for="tahun">Tahun Ajaran</label>
+    <input id="tahun" type="text" name="tahunAjaran" th:value="${kelas.tahunAjaran}"><br/>
+
+    <button type="submit">Save</button>
+    <a th:href="@{~/kelas}">
+        <button>Back</button>
+    </a>
+
+
+</form>
+</body>
+</html>

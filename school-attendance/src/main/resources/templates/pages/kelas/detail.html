@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - kelas</title>
+</head>
+<body>
+<h1>Detail Data Kelas</h1>
+<form th:action="@{/kelas/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" name="id" th:value="${detail.id}"><br/>
+
+    <label for="nama">Nama Kelas</label>
+    <input id="nama" type="text" name="namaKelas" th:value="${detail.namaKelas}"><br/>
+
+    <label for="wali">Wali Kelas</label>
+    <input id="wali" type="text" name="waliKelas" th:value="${detail.waliKelas}"><br/>
+
+    <label for="tahun">Tahun Ajaran</label>
+    <input id="tahun" type="text" name="tahunAjaran" th:value="${detail.tahunAjaran}"><br/>
+
+    <a th:href="@{/kelas}">
+        <button type="button">Close</button>
+    </a>
+</form>
+
+</body>
+</html>

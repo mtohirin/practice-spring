@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - absensi</title>
+</head>
+<body>
+<h1>Delete Data Absensi</h1>
+<form th:action="@{~/absensi/remove}" method="post">
+    <input type="hidden" name="id" th:value="${delete.id}">
+
+    <label for="tanggal">Tanggal</label>
+    <input id="tanggal" type="text" th:value="${delete.tanggal}"><br/>
+
+    <label for="status">Status</label>
+    <input id="status" type="text" th:value="${delete.status}">
+
+    <button type="submit">Delete</button>
+    <a th:href="@{~/absensi}">
+        <button>Back</button>
+    </a>
+</form>
+
+</body>
+</html>

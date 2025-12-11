@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add = guru</title>
+</head>
+<body>
+<h1>Add Data Guru</h1>
+<form th:action="@{~/guru/save}" method="post">
+
+    <label for="nama">Nama Guru</label>
+    <input id="nama" type="text" name="namaGuru" placeholder="masukan nama guru"><br/>
+
+    <label for="nip">NIP Guru</label>
+    <input id="nip" type="text" name="nip" placeholder="masukan nip"><br/>
+
+    <label for="mapel">Mata Pelajaran</label>
+    <input id="mapel" type="text" name="mataPelajaran" placeholder="masukan mata pelajaran"><br/>
+
+    <button type="submit">Save</button>
+    <button th:href="@{~guru}">Back</button>
+</form>
+
+</body>
+</html>

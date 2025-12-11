@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add - siswa</title>
+</head>
+<body>
+<h1>Add Data Siswa</h1>
+<form th:action="@{~/siswa/save}" method="post">
+
+    <label for="name">Nama Siswa</label>
+    <input id="name" type="text" name="name"><br/>
+
+    <label for="nis">NIS</label>
+    <input id="nis" type="text" name="nis"><br/>
+
+    <button type="submit">Save</button>
+    <button th:href="@{~/siswa}">Back</button>
+</form>
+
+</body>
+</html>

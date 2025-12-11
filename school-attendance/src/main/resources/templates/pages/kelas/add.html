@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add - kelas</title>
+</head>
+<body>
+<h1>Add Data Kelas</h1>
+<form th:action="@{~/kelas/save}" method="post">
+
+    <label for="kelas">Nama Kelas</label>
+    <input id="kelas" type="text" name="namaKelas"><br/>
+
+    <label for="walikelas">Wali Kelas</label>
+    <input id="walikelas" type="text" name="waliKelas"><br/>
+
+    <label for="tahun">Tahun Ajaran</label>
+    <input id="tahun" type="text" name="tahunAjaran"><br/>
+
+    <button type="submit">Save</button>
+    <button th:href="@{~/kelas}">Back</button>
+</form>
+
+
+</body>
+</html>

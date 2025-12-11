@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index - kelas</title>
+</head>
+<body>
+<h1>INDEX KELAS</h1>
+<button><a th:href="@{~/kelas/add}">Add kelas</a></button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nama Kelas</th>
+        <th>Wali Kelas</th>
+        <th>Tahun Ajaran</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <body>
+    <tr th:each="kelas :${kelas}">
+        <td th:text="${kelas.id}"></td>
+        <td th:text="${kelas.namaKelas}"></td>
+        <td th:text="${kelas.waliKelas}"></td>
+        <td th:text="${kelas.tahunAjaran}"></td>
+        <td>
+            <a th:href="@{/kelas/edit/{id}(id=${kelas.id})}">EDIT</a>
+            <a th:href="@{/kelas/delete/{id}(id=${kelas.id})}">DELETE</a>
+            <a th:href="@{/kelas/detail/{id}(id=${kelas.id})}">DETAIL</a>
+        </td>
+    </tr>
+    </body>
+</table>
+</body>
+</html>

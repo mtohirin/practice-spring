@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://">
+    <title>detail - siswa</title>
+</head>
+<body>
+<h1>Detail Siswa</h1>
+<form th:action="@{/siswa/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${detail.id}"><br/>
+
+    <label for="name">Nama Siswa</label>
+    <input id="name" type="text" name="name" th:value="${detail.name}"><br/>
+
+    <label for="nis">NIS</label>
+    <input id="nis" type="text" name="nis" th:value="${detail.nis}"><br/>
+    <button>
+        <a th:href="@{~/siswa}">Close</a>
+    </button>
+</form>
+
+</body>
+</html>

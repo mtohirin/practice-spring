@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - kelas</title>
+</head>
+<body>
+<h1>Delete Data Kelas</h1>
+<form th:action="@{~/kelas/remove}" method="post">
+    <input type="hidden" name="id" th:value="${delete.id}">
+
+    <label for="name">Nama Kelas</label>
+    <input id="name" type="text" name="namaKelas" th:value="${delete.namaKelas}"><br/>
+
+    <label for="wali">Wali Kelas</label>
+    <input id="wali" type="text" name="waliKelas" th:value="${delete.waliKelas}"><br/>
+
+    <label for="tahun">Tahun Ajaran</label>
+    <input id="tahun" type="text" name="tahunAjaran" th:value="${delete.tahunAjaran}"><br/>
+
+    <a th:href="@{~/kelas}">
+        <button>Back</button>
+    </a>
+</form>
+
+</body>
+</html>

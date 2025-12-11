@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add - absensi</title>
+</head>
+<body>
+<h1>Add Data Absensi</h1>
+<form th:action="@{~/absensi/save}" method="post">
+
+    <label for="tanggal">Tanggal</label>
+    <input id="tanggal" type="datetime-local" name="tanggal"><br/>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+        <option th:each="s : ${statuses}"
+                th:value="${s}"
+                th:text="${s}">
+        </option>
+     </select>
+    <br/><br/>
+    <button type="submit">Save</button>
+    <button th:href="@{~/absensi}">Back</button>
+
+</form>
+
+</body>
+</html>

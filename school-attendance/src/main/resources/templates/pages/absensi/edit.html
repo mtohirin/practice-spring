@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - absensi</title>
+</head>
+<body>
+<h1>Edit Absensi</h1>
+<form th:action="@{~/absensi/update}" method="post">
+    <input type="hidden" name="id" th:value="${edit.id}">
+
+    <label for="tanggal">Tanggal</label>
+    <input id="tanggal" type="datetime-local" th:value="${edit.tanggal}"><br/>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+        <option th:each="s : ${statuses}"
+                th:value="${s}"
+                th:text="${s}"
+                th:selected="${s == edit.status}">
+
+        </option>
+    </select>
+    <br/><br/>
+    <button type="submit">Save</button>
+    <button th:href="@{~/absensi}">Back</button>
+</form>
+
+</body>
+</html>

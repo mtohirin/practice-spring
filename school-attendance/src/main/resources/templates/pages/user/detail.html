@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - user</title>
+</head>
+<body>
+<h1>Detail User</h1>
+<form th:action="@{/user/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${detail.id}"><br/>
+
+    <label for="use">Username</label>
+    <input id="use" type="text" th:value="${detail.username}"><br/>
+
+    <label for="pass">Password</label>
+    <input id="pass" type="text" th:value="${detail.password}"><br/>
+
+    <label for="role">User Role</label>
+    <input id="role" type="text" th:value="${detail.userRole}"><br/>
+
+    <label for="status">User Status</label>
+    <input id="status" type="text" th:value="${detail.userStatus}"><br/>
+
+    <button>
+        <a th:href="@{~/user}">Close</a>
+    </button>
+</form>
+
+</body>
+</html>

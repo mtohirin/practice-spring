@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - guru</title>
+</head>
+<body>
+<h1>Edit Data Guru</h1>
+<form th:action="@{~/guru/update}" method="post">
+    <input type="hidden" name="id" th:value="${guru.id}">
+
+    <label for="nama">Nama Guru</label>
+    <input id="nama" type="text" name="namaGuru" th:value="${guru.namaGuru}"><br/>
+
+    <label for="nip">NIP</label>
+    <input id="nip" type="text" name="nip" th:value="${guru.nip}"><br/>
+
+    <label for="mapel">Mata Pelajaran</label>
+    <input id="mapel" type="text" name="mataPelajaran" th:value="${guru.mataPelajaran}"><br/>
+
+    <button type="submit">Save</button>
+    <a th:href="@{~guru}">
+        <button type="button">Back</button>
+    </a>
+</form>
+
+</body>
+</html>

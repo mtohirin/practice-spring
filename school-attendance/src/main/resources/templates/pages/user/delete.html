@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - user</title>
+</head>
+<body>
+<h1>Delete User</h1>
+<form th:action="@{/user/remove}" method="post">
+
+    <input type="hidden" name="id" th:value="${delete.id}">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${delete.id}"><br/>
+
+    <label for="use">Username</label>
+    <input id="use" type="text" th:value="${delete.username}"><br/>
+
+    <label for="pass">Password</label>
+    <input id="pass" type="text" th:value="${delete.password}"><br/>
+
+    <label for="role">User Role</label>
+    <input id="role" type="text" th:value="${delete.userRole}"><br/>
+
+    <label for="status">User Status</label>
+    <input id="status" type="text" th:value="${delete.userStatus}"><br/>
+
+    <button type="submit">Delete</button>
+    <a th:href="@{~/user}">
+        <button>Back</button>
+    </a>
+</form>
+
+
+</body>
+</html>

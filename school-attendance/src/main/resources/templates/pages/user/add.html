@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add - user</title>
+</head>
+<body>
+<h1>Add Data User</h1>
+<form th:action="@{~/user/save}" method="post">
+
+    <label for="use">Username</label>
+    <input id="use" type="text" name="username" placeholder="masukan username"><br/>
+
+    <label for="pass">Password</label>
+    <input id="pass" type="text" name="password" placeholder="masukan password"><br/>
+
+    <label for="role">User Role</label>
+    <select id="role" name="userRole">
+        <option th:each="r : ${roles}"
+                th:value="${r}"
+                th:text="${r}">
+
+        </option>
+    </select>
+    <br/><br/>
+    <label for="status">User Status</label>
+    <select id="status" name="userStatus">
+        <option th:each="s : ${statuses}"
+                th:value="${s}"
+                th:text="${s}">
+
+        </option>
+    </select>
+    <br/><br/>
+
+    <button type="submit">Save</button>
+    <button th:href="@{~/user}">Back</button>
+</form>
+
+</body>
+</html>

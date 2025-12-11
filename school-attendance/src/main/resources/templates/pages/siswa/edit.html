@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - siswa</title>
+</head>
+<body>
+<h1>Edit Data Siswa</h1>
+<form th:action="@{~/siswa/update}" method="post">
+    <input type="hidden" name="id" th:value="${siswa.id}">
+
+    <label for="nama">Nama Siswa</label>
+    <input id="nama" type="text" name="name" th:value="${siswa.name}"><br/>
+
+    <label for="nis">NIS</label>
+    <input id="nis" type="text" name="nis" th:value="${siswa.nis}"><br/>
+
+    <button type="submit">Save</button>
+    <a th:href="@{~/siswa}">
+        <button type="button">Back</button>
+    </a>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>edit - customer</title>
+</head>
+<body>
+<h1>Edit Data Customer</h1>
+
+<form th:action="@{~/customer/update}" method="post">
+
+    <input type="hidden" name="id" th:value="${customer.id}">
+
+    <label for="name">Name Customer</label><br/>
+    <input id="name" type="text" name="name" th:value="${customer.name}"><br/>
+
+    <label for="email">Email Customer</label><br/>
+    <input id="email" type="email" name="email" th:value="${customer.email}"><br/>
+
+    <label for="phone">Phone Customer</label><br/>
+    <input id="phone" type="text" name="phone" th:value="${customer.phone}"><br/>
+
+    <button type="submit">Save</button>
+    <button>
+        <a th:href="@{~/customer}">Back</a>
+    </button>
+</form>
+
+</body>
+</html>

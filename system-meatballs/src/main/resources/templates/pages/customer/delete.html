@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete - customer</title>
+</head>
+<body>
+<h1>Delete Customer</h1>
+<form th:action="@{~/customer/delete}" method="post">
+
+    <label>Nama Customer</label><br/>
+    <input type="text" name="name" th:value="${delete.name}"><br/>
+
+    <label>Email Customer</label><br/>
+    <input type="email" name="email" th:value="${delete.email}">
+</form>
+
+</body>
+</html>

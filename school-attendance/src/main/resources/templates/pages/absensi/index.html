@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>index - absensi</title>
+</head>
+<body>
+<h1>Index Absensi</h1>
+<button><a th:href="@{~/absensi/add}">Add Absensi</a></button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tanggal</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <body>
+    <tr th:each="absensi :${absensi}">
+        <td th:text="${absensi.id}"></td>
+        <td th:text="${absensi.tanggal}"></td>
+        <td th:text="${absensi.status}"></td>
+        <td>
+            <a th:href="@{/absensi/edit/{id}(id=${absensi.id})}">EDIT</a>
+            <a th:href="@{/absensi/delete/{id}(id=${absensi.id})}">DELETE</a>
+            <a th:href="@{/absensi/detail/{id}(id=${absensi.id})}">DETAIL</a>
+
+        </td>
+    </tr>
+    </body>
+</table>
+</body>
+</html>

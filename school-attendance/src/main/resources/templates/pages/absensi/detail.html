@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - absensi</title>
+</head>
+<body>
+<h1>Detail Data Absensi</h1>
+<form th:action="@{/abensi/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${detail.id}"><br/>
+
+    <label for="tanggal">Tanggal</label>
+    <input id="tanggal" type="text" th:value="${detail.tanggal}"><br/>
+
+    <label for="status">Status</label>
+    <input id="status" type="text" th:value="${detail.status}"><br/>
+
+    <button>
+        <a th:href="@{/absensi}">Close</a>
+    </button>
+</form>
+
+</body>
+</html>
