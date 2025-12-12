@@ -71,7 +71,7 @@ public class ControllerCustomer {
         if (customerModel == null){
             return new ModelAndView("/pages/customer/detail");
         }
-        ModelAndView view = new ModelAndView("/pages/costumer/detail");
+        ModelAndView view = new ModelAndView("/pages/customer/detail");
         view.addObject("customer", customerModel);
         return view;
     }

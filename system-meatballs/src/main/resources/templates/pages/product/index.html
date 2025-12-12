@@ -15,8 +15,8 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
+        <th>Name Product</th>
+        <th>Price Product</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -27,6 +27,8 @@
         <td th:text="${product.price}"></td>
         <td>
             <a th:href="@{~/product/edit/{id}(id=${product.id})}">EDIT</a>
+            <a th:href="@{~/product/delete/{id}(id=${product.id})}">DELETE</a>
+            <a th:href="@{~/product/detail/{id}(id=${product.id})}">DETAIL</a>
         </td>
     </tr>
     </body>

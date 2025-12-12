@@ -50,7 +50,7 @@ public class ProductController {
     }
 
     @GetMapping("/delete/{id}")
-    public ModelAndView showDeleteConfirmation(@PathVariable("id")String id){
+    public ModelAndView delete(@PathVariable("id")String id){
         ProductModel productModel = this.productService.getById(id);
         if (productModel == null){
             return new ModelAndView("/pages/product/delete");
@@ -60,7 +60,7 @@ public class ProductController {
         return view;
     }
     @PostMapping("/delete")
-    public ModelAndView delete(@RequestParam ProductModel productModel){
+    public ModelAndView delete(@ModelAttribute ProductModel productModel){
         this.productService.delete(productModel.getId());
         return new ModelAndView("redirect:/product");
     }

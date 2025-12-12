@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - product</title>
+</head>
+<body>
+<h1>Detail Data Product</h1>
+<form th:action="@{/product/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input id="id" type="text" th:value="${product.id}"><br/>
+
+    <label for="name">Name Product</label>
+    <input id="name" type="text" th:value="${product.name}"><br/>
+
+    <label for="price">Price Product</label>
+    <input id="price" type="number" th:value="${product.price}"><br/>
+
+    <button>
+        <a th:href="@{~/product}">Close</a>
+    </button>
+</form>
+
+</body>
+</html>

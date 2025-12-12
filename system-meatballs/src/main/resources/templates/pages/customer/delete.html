@@ -5,14 +5,26 @@
     <title>delete - customer</title>
 </head>
 <body>
-<h1>Delete Customer</h1>
-<form th:action="@{~/customer/delete}" method="post">
+<h1>Delete Data Customer</h1>
+<form th:action="@{~/customer/remove}" method="post">
 
-    <label>Nama Customer</label><br/>
-    <input type="text" name="name" th:value="${delete.name}"><br/>
+    <label for="id">ID</label><br/>
+    <input id="id" name="id" th:value="${customer.id}"><br/>
+
+    <label>Name Customer</label><br/>
+    <input type="text" name="name" th:value="${customer.name}"><br/>
 
     <label>Email Customer</label><br/>
-    <input type="email" name="email" th:value="${delete.email}">
+    <input type="email" name="email" th:value="${customer.email}"><br/>
+
+    <label for="phone">Phone Customer</label><br/>
+    <input id="phone" type="text" name="phone" th:value="${customer.phone}"><br/>
+
+    <button type="submit">Delete</button>
+    <a th:href="@{~/customer}">
+        <button type="button">Back</button>
+    </a>
+
 </form>
 
 </body>

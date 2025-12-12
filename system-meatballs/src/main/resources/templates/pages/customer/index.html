@@ -15,9 +15,9 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
+        <th>Name Customer</th>
+        <th>Email Customer</th>
+        <th>Phone Customer</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -29,6 +29,8 @@
         <td th:text="${customer.phone}"></td>
         <td>
             <a th:href="@{~/customer/edit/{id}(id=${customer.id})}">EDIT</a>
+            <a th:href="@{~/customer/delete/{id}(id=${customer.id})}">DELETE</a>
+            <a th:href="@{~/customer/detail/{id}(id=${customer.id})}">DETAIL</a>
         </td>
     </tr>
     </tbody>

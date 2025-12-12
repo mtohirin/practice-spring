@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderModel {
     private String id;
-    private String productid;
+    private String productId;
     private String customerId;
     private int quantity;
 

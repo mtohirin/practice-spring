@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>detail - customer</title>
+</head>
+<body>
+<h1>Detail Data Customer</h1>
+<form th:action="@{/customer/detail}" method="get">
+
+    <label for="id">ID</label>
+    <input type="text" id="id" th:value="${customer.id}"><br/>
+
+    <label for="name">Name Customer</label>
+    <input type="text" id="name" th:value="${customer.name}"><br/>
+
+    <label for="email">Email Customer</label>
+    <input type="email" id="email" th:value="${customer.email}"><br/>
+
+    <label for="phone">Phone Customer</label>
+    <input type="text" id="phone" th:value="${customer.phone}"><br/>
+
+    <button>
+        <a th:href="@{~/customer}">Close</a>
+    </button>
+</form>
+
+</body>
+</html>
